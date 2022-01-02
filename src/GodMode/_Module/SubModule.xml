@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <Name value="God Mode" />
+  <Id value="GodMode" />
+  <Version value="v1.0.0" />
+  <Official value="false" />
+  <DefaultModule value="false" />
+  <SingleplayerModule value="true" />
+  <MultiplayerModule value="false" />
+  <DependedModules>
+    <DependedModule Id="Bannerlord.Harmony" DependentVersion="v$harmonyversion$" />
+    <DependedModule Id="Native" DependentVersion="e$gameversion$" />
+    <DependedModule Id="SandBoxCore" DependentVersion="e$gameversion$" />
+    <DependedModule Id="Sandbox" DependentVersion="e$gameversion$" />
+    <DependedModule Id="StoryMode" DependentVersion="e$gameversion$" />
+  </DependedModules>
+  <DependedModuleMetadatas>
+    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v$harmonyversion$" />
+    <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="e$gameversion$.*" />
+    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="e$gameversion$.*" />
+    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="e$gameversion$.*" />
+    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" version="e$gameversion$.*" />
+    <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" version="e$gameversion$.*" optional="true" />
+  </DependedModuleMetadatas>
+  <SubModules>
+    <SubModule>
+      <Name value="GodMode"/>
+      <DLLName value="GodMode.dll"/>
+      <SubModuleClassType value="GodMode.GodModeSubModule"/>
+      <Tags />
+    </SubModule>
+  </SubModules>
+  <Xmls />
+</Module>
