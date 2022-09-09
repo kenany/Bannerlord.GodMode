@@ -1,5 +1,5 @@
-﻿using HarmonyLib;
-using TaleWorlds.Core;
+using HarmonyLib;
+using TaleWorlds.Library;
 using TaleWorlds.Localization;
 using TaleWorlds.MountAndBlade;
 

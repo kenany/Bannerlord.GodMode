@@ -8,12 +8,14 @@ env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   # Disable sending .NET CLI telemetry to Microsoft.
   DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+  GITHUB_ACTIONS: true
 jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        game-version: [1.6.5, 1.7.0, 1.7.1, 1.7.2]
+        game-version: [1.8.0]
         os: [ubuntu-latest]
     steps:
     - uses: actions/setup-dotnet@v2.1.1
@@ -21,7 +23,8 @@ jobs:
         dotnet-version: 6.0.x
     - uses: actions/checkout@v3.1.0
     - run: dotnet clean src/GodMode/GodMode.csproj --configuration Release
-    - run: |
+    - name: Build
+      run: |
         mkdir out
         dotnet build src/GodMode/GodMode.csproj --configuration Release -p:GameVersion=${{ matrix.game-version }} -p:GameFolder=$(realpath -s "./out")
     - uses: actions/upload-artifact@v3.1.1
