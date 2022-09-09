@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ModuleName>GodMode</ModuleName>
+    <ModuleId>GodMode</ModuleId>
+    <ModuleName>$(ModuleId)</ModuleName>
     <Version>1.0.2</Version>
     <TargetFramework>net472</TargetFramework>
     <Platforms>x64</Platforms>
