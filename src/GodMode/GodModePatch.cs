@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using TaleWorlds.MountAndBlade;
 
 namespace GodMode
@@ -8,7 +8,10 @@ namespace GodMode
     {
         public static void Postfix()
         {
-            Agent.Main?.SetInvulnerable(true);
+            if (Agent.Main?.CurrentMortalityState != Agent.MortalityState.Invulnerable)
+            {
+                Agent.Main?.ToggleInvulnerable();
+            }
         }
     }
 }
