@@ -7,7 +7,7 @@
     <Platforms>x64</Platforms>
     <LangVersion>9.0</LangVersion>
     <Nullable>enable</Nullable>
-    <GameVersion Condition="'$(GameVersion)' == ''">1.8.0</GameVersion>
+    <GameVersion Condition="'$(GameVersion)' == ''">1.8.1</GameVersion>
     <HarmonyVersion>2.2.0</HarmonyVersion>
 
     <GameFolder Condition="!Exists($(GameFolder)) AND $(OS) == 'Windows_NT'">$(registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 261550@InstallLocation)</GameFolder>
