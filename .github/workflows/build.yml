@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        game-version: [1.8.0, 1.8.1]
+        game-version: [1.8.0, 1.8.1, 1.9.0]
         os: [ubuntu-latest]
     steps:
     - uses: actions/setup-dotnet@v3.0.3
